@@ -48,7 +48,7 @@ loaded via a namespace (and not attached):
 [26] backports_1.1.4       stats4_3.6.0          pkgconfig_2.0.2  
 
 
-# Microarray_scripts: PCA plot using plot_ly R package  
+# PCA plot using plot_ly R package  
 
 ## 1. Install `R` and `RStudio`  
 ## 2. Install `plotly` R package  
