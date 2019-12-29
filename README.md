@@ -1,12 +1,12 @@
-The following microarray (affy) data analysis pipeline is intended to help my collaborators at NIH/NIAID and Duke University.  
- 
-# Process Affy raw data - normalization, background correction, expression quantification  
+The following microarray (affy) data analysis pipeline is intended to help my collaborators at NIH/NIAID and Duke University. Session info provides working environment like the version of R used and the loaded packages. `sessioninfo()` gives a snapshot to help people reproduce what you’ve done or spot any anomalies.  
+
+# I). Process Affy raw data - normalization, background correction, expression quantification  
 
 ## 1. Install `R` and `RStudio`
 ## 2. Install `affy` and `hgu133plus2.db` R packages
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-   install.packages("BiocManager")
+if (!requireNamespace("BiocManager", quietly = TRUE))  
+  install.packages("BiocManager")  
 BiocManager::install(c("affy","hgu133plus2.db"))  
 
 ## 3. Update raw affy data directory and meta data file paths  
@@ -19,7 +19,7 @@ results.base.dir <- paste(base.dir, "/Analysis_2019", sep="")
 meta.file.name <- paste(results.base.dir, "data_objects_20191001/Raw_Process/20191001_NIDA_metadata.txt", sep="/")  
 out.file.raw <- paste(results.base.dir, "data_objects_20191001/Raw_Process/Raw_RMA_Proble_Expression.txt", sep="/")  
 
-## 4. Finally run the script
+## 4. Run the script
 
 > sessionInfo()  
 R version 3.6.0 (2019-04-26)  
@@ -47,14 +47,14 @@ loaded via a namespace (and not attached):
 [21] zeallot_0.1.0         memoise_1.1.0         RSQLite_2.1.2         compiler_3.6.0        pillar_1.4.2           
 [26] backports_1.1.4       stats4_3.6.0          pkgconfig_2.0.2  
 
-# Differential expression analysis - from Affy raw data   
+# II). Differential expression analysis - from Affy raw data   
 
 ## 1. Install `R` and `RStudio`  
 ## 2. Install `affy` and `hgu133plus2.db` R packages   
 
-# if (!requireNamespace("BiocManager", quietly = TRUE))  
-#   install.packages("BiocManager")  
-# BiocManager::install(c("affy","samr","hgu133plus2.db"))  
+if (!requireNamespace("BiocManager", quietly = TRUE))  
+  install.packages("BiocManager")  
+BiocManager::install(c("affy","samr","hgu133plus2.db"))  
 
 ## 3. Update raw affy data directory, meta data file and output file paths
 
@@ -75,7 +75,7 @@ case <- "VL.pos.Ctrl"
   
 fdr  = 0.05   
 
-## 5. Finally run the script  
+## 5. Run the script  
 
 ## 6. Pathway analysis  
 Upload differentially expressed genes at IPA (Ingenuity pathway analysis) for pathway enrichment analysis.  
@@ -107,13 +107,13 @@ loaded via a namespace (and not attached):
 [29] R6_2.4.0              GSA_1.03.1            blob_1.2.0            magrittr_1.5          backports_1.1.4       promises_1.0.1        htmltools_0.3.6        
 [36] matrixStats_0.54.0    mime_0.7              xtable_1.8-4          httpuv_1.5.1          crayon_1.3.4          affyio_1.54.0          
 
-# PCA plot using plot_ly R package  
+# III). PCA plot using plot_ly R package  
 
 ## 1. Install `R` and `RStudio`  
 ## 2. Install `plotly` R package  
 
 if (!requireNamespace("BiocManager", quietly = TRUE))  
-   install.packages("BiocManager")  
+  install.packages("BiocManager")  
 BiocManager::install("plotly") 
 
 ## 3. Update gene expression and meta data file paths  
@@ -137,7 +137,7 @@ cutoff <- 0.05
 
 Dr. Sleasman suggested color panel  
 
-## 7. Finally run the script  
+## 7. Run the script  
 
 > sessionInfo()  
 R version 3.6.0 (2019-04-26)  
