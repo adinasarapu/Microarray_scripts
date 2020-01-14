@@ -155,4 +155,37 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base  
 
 loaded via a namespace (and not attached):  
-[1] compiler_3.6.0 tools_3.6.0    yaml_2.2.0    
+[1] compiler_3.6.0 tools_3.6.0    yaml_2.2.0   
+
+# IV). Venn diagrams using VennDiagram R packge  
+
+## 1. Install `R` and `RStudio`
+## 2. Install `affy` and `hgu133plus2.db` R packages  
+
+if (!requireNamespace("BiocManager", quietly = TRUE))  
+  install.packages("BiocManager")
+BiocManager::install(VennDiagram")  
+
+## 3. Update DEG file file paths  
+
+> sessionInfo()  
+R version 3.6.0 (2019-04-26)  
+Platform: x86_64-apple-darwin15.6.0 (64-bit)  
+Running under: macOS Mojave 10.14.6  
+
+Matrix products: default  
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib  
+LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib  
+
+locale:  
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8  
+
+attached base packages:  
+[1] grid      stats     graphics  grDevices utils     datasets  methods   base  
+
+other attached packages:  
+[1] VennDiagram_1.6.20  futile.logger_1.4.3  
+
+loaded via a namespace (and not attached):  
+[1] compiler_3.6.0       formatR_1.7          tools_3.6.0          lambda.r_1.2.3       yaml_2.2.0            
+[6] futile.options_1.0.1 
